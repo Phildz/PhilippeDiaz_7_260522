@@ -1,0 +1,79 @@
+nav {
+    position: absolute;    
+    top: 10px;
+}
+
+.nav-container {
+    width: 98%;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fd2d01;
+    position: fixed;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.titres-entête {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+h3 {
+    color: #fd2d01;
+    font-size: clamp(14px, 4vw, 30px);
+    /* margin: 0; */
+    /* padding-bottom: 0px; */
+    margin: 0px;
+}
+h5 {
+    font-size: 20px;
+    margin: 0;
+    font-size: clamp(14px, 2vw, 30px);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.nav-ul-logout {
+    width: 33%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul.nav-ul-titre {
+    width: 33%;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+ul.nav-ul-login {
+    width: 33%;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+
+.logo img {
+    width: 70%;
+    min-width: 10vmin;
+}

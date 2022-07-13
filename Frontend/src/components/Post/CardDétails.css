@@ -1,0 +1,117 @@
+
+/*NEW*/
+
+.post {
+    width: 100%;
+}
+ul.post-ul {
+    margin: 100px 20px 10px -30px;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: -40px; */
+    align-items: center;
+    width: 100%;
+}
+li.onepost-li {
+    list-style-type: none;
+    margin: 5px;
+    /* border: 1px solid #4e5166; */
+    width: 65%;
+    /* text-align: center; */
+    /* align-items: center; */
+    background: #ffd7d7;
+    /* border-radius: 10px; */
+    /* position: relative; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+p {
+    margin: 20px 15%;
+    width: 100%;
+    font-size: clamp(14px, 1vw, 30px);
+}
+img {
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    margin: 0 15%;
+}
+button.btn.btn-post-retour {
+    /* position: absolute; */
+    /* top: 130px; */
+    /* right: 180px; */
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: blue;
+    font-weight: 500;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.cont-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.btn-post-update {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 10px 0px 10px 70px;
+    /* height: 21%; */
+    
+}
+.btn-post-delete {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: red;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 10px 0px 10px 20px;
+    
+}
+li.onepost-li {
+    list-style-type: none;
+    margin: 5px;
+    /* border: 1px solid #4e5166; */
+    width: 65%;
+    /* text-align: center; */
+    /* align-items: center; */
+    background: #ffd7d7;
+    /* border-radius: 10px; */
+    /* position: relative; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.postLikeCounter {
+    margin: 10px 15%;
+    font-size: clamp(14px, 1vw, 30px);
+}
+.cont-like-date {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.updatedAt {
+    padding-top: 0px;
+    /* margin: 0 15%; */
+    margin: 0 76px 0 0;
+    font-size: clamp(14px, 1vw, 30px);
+}

@@ -1,0 +1,68 @@
+form#update-form {
+    /* width: 100%; */
+    margin: 30px auto 10px;
+}
+.card-share {
+    width: 50%;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+    /* position: sticky; */
+    /* top: 120px; */
+    margin: 55px auto 20px auto;
+    background: white;
+    position: relative;
+}
+button.btn.btn-post-update-retour {
+    position: absolute;
+    top: 96px;
+    right: 5px;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: blue;
+    font-weight: 500;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+}
+.shareButton-update {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 500;
+    margin: 0 0 0 40px;
+    cursor: pointer;
+    color: white;
+}
+.shareBottom-update {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+/* **** FORMATS TABLETTES ET LAPTOP **** */
+
+@media screen and (min-width: 576px)
+{
+    *{box-sizing: border-box; 
+    }
+
+/* **** FORMAT PC L et XL **** */
+
+@media screen and (min-width: 992px)
+{
+}
+
+/* **** FORMAT XXL **** */
+
+@media screen and (min-width: 1440px)
+{
+
+}
+
+
+}

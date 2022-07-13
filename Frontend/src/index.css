@@ -1,0 +1,7 @@
+*{box-sizing: border-box; 
+} /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
+    du padding et de la bordure */
+
+body{
+    font-family:Lato;
+}

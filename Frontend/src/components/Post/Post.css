@@ -1,0 +1,118 @@
+.card {
+    /*position: relative;*/
+    /*top: 60px;*/
+    z-index: -1;
+}
+
+li.card-li {
+    list-style-type: none;
+    margin: 5px;
+    /* border: 1px solid #4e5166; */
+    width: 65%;
+    /* text-align: center; */
+    /* align-items: center; */
+    background: #ffd7d7;
+    border-radius: 10px;
+    /*position: relative;*/
+    cursor: pointer;
+}
+ul.card-ul {
+    margin: 20px 20px 10px -30px;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: -40px; */
+    align-items: center;
+}
+.box-message {
+    /* align-items: center; */
+    margin: 5px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: white;
+    
+    /* height: min-content; */
+    padding: 0px 10px;
+}
+p.cont-message {
+    margin: 20px 0px 20px 10px;
+    width: 100%;
+    font-size: clamp(14px, 1vw, 30px);
+}
+.updatedAt {
+    /* position: absolute; */
+    float: right;
+    margin: 0 17px 0px 0px;
+    font-size: 14px;
+    /* position: relative; */
+    /* bottom: 0px; */
+    /* position: absolute; */
+    /* right: 20px; */
+    /* margin-bottom: -8px; */
+    /* position: absolute; */
+    /* right: 0px; */
+    /* bottom: -8px; */
+    padding-top: 25px;
+}
+img.image-post {
+    width: 96%;
+    height: 160px;
+    object-fit: cover;
+    /* align-items: center; */
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+.cont-image {
+    width: 100%;
+    text-align: center;
+    height: 170px;
+}
+button.btn-createPost {    
+    position: fixed;
+    top: 160px;
+    right: 10px;
+}
+.btn-likeDislike {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0 0 12px;
+    min-width: 10%;
+}
+.postLikeCounter {
+    margin: 0 0 0 24px;
+}
+.btn-détail {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 10px 0px 10px 20px;
+}
+.cont-card-like-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+.card-updatedAt {
+    padding-top: 0px;
+    /* margin: 0 15%; */
+    margin: 10px -35px 7px 0px;
+    font-size: clamp(14px, 1vw, 30px);
+    width: 70%;
+    min-width: 35%;
+}
+.card-postLikeCounter {
+    margin: 14px 0px 7px 10px;
+    font-size: clamp(14px, 1vw, 30px);
+    width: 100%;
+    min-width: 30%;
+}
+i.likes {
+    font-size: clamp(14px, 0.5vw, 30px);
+}

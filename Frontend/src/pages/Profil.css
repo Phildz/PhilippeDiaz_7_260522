@@ -1,0 +1,52 @@
+.profil-page {
+    margin: 80px auto 0;
+    max-width: 1200px;    
+}
+.log-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.connection-form {
+    border: 1px solid #fd2d01;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 150px;
+}
+.log-container ul {
+    font-size: 25px;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: flex;
+    flex-direction: column;
+    /* margin: 5px; */
+    width: 50%;
+}
+
+li#login {
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #fd2d01;
+    border-radius: 20px;
+    width: 90%;
+}
+li#register {
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #fd2d01;
+    border-radius: 20px;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form#sign-up-form {
+    margin-bottom: 20px;
+}
