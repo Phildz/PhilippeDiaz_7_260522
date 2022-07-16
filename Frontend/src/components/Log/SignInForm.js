@@ -25,6 +25,7 @@ const SignInForm = () => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userId", res.data.userId);
         localStorage.setItem("isAdmin", res.data.isAdmin);
+        localStorage.setItem("email", res.data.email);
         window.location = "/home"; //utilisateur connecté
         if (res.data.error) {
           emailError.innerHTML = res.data.error.email;

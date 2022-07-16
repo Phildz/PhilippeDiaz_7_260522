@@ -1,4 +1,4 @@
-import React, { useState, /*useHistory*/ } from "react";
+import { useState } from "react";
 import axios from "axios";
 import './Post.css';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
@@ -50,12 +50,10 @@ const Post = ({ post, getPosts }) => {
         if (post.usersLiked.find((user) => user === userId)) {
             console.log(userId, "statut: déjà liké");
             likePost(id, 0);
-            //setIsLiked(false);
             setLike(like - 1);
         } else {
             console.log(userId, "statut: non liké");
             likePost(id, 1);
-            //setIsLiked(true);
             setLike(like + 1);
         }
     }
@@ -67,7 +65,7 @@ const Post = ({ post, getPosts }) => {
                     <div className="box-message">
                         <p className="cont-message">{post.message}</p>
                     </div>
-                    <div className="cont-image">
+                    <div className="cont-image-post">
                         <img className="image-post-home" src={post.imageUrl} alt="img post" />
                     </div>
                     <div className="cont-card-like-date">
@@ -83,7 +81,11 @@ const Post = ({ post, getPosts }) => {
                         </div>
                         <div className="card-postLikeCounter">{like} "like" au total !
                         </div>
-                        <div className="card-updatedAt">{new Date(post.updatedAt).toLocaleString()}</div>
+                        <div className="card-updatedAt">
+                            <div className="card-updatedAt-date">
+                            {new Date(post.updatedAt).toLocaleDateString()}
+                            </div>
+                        </div>
                     </div>
                     <button className="btn-détail" onClick={() => goToPost(post._id, post.userId)}>
                         Détail publication

@@ -142,10 +142,10 @@ exports.readOnePublication = (req, res, next) => {
   );
 };
 
-// --- Ajout likes / dislikes pour chaque publication
+// --- Ajout likes / unlikes pour chaque publication
 exports.likePublication = (req, res) => {
 
-  // --- Si le client Like cette publication
+  // --- Si le client Like la publication : like reçu = 1
   if (req.body.like === 1) {
     Publication.findOneAndUpdate(
       // --- filtre sur l'id, on incrémente likes et on met l'id ds le tableau
@@ -153,43 +153,22 @@ exports.likePublication = (req, res) => {
       { $inc: { likes: 1 }, $push: { usersLiked: req.body.userId } }
     )
       .then(() => res.status(200).json({ message: "Like ajouté !" }))
-      .catch((error) => res.status(400).json({ error }));
-
-    // --- Si le client disike cette publication 
-  } else if (req.body.like === -1) {
-    // --- filtre sur l'id, on incrémente likes et on met l'id ds le tableau
-    Publication.findOneAndUpdate(
-      { _id: req.params.id },
-      { $inc: { dislikes: 1 }, $push: { usersDisliked: req.body.userId } }
-    )
-      .then(() => res.status(200).json({ message: "Dislike ajouté !" }))
-      .catch((error) => res.status(400).json({ error }));
-
-    /* Si le client annule son choix */
-  } else {
+      .catch((error) => res.status(400).json({ error })); 
+  } 
+  
+  // --- Si le client unLike la publication : like reçu = 0
+  else {
     // --- recherche de la publication concernée par l'id user
     Publication.findOne({ _id: req.params.id })
       .then((resultat) => {
-        // --- recherche si le tableau userLike contient l'userId
-        // --- si ok on incrémente de -1 le like et on enlève l'userId du tab userLike
-        if (resultat.usersLiked.includes(req.body.userId)) {
+        // --- le tableau userLike contient l'userId
+        // --- on incrémente de -1 le like et on enlève l'userId du tab userLike
           Publication.findOneAndUpdate(
             { _id: req.params.id },
             { $inc: { likes: -1 }, $pull: { usersLiked: req.body.userId } }
           )
             .then(() => res.status(200).json({ message: "like retiré !" }))
             .catch((error) => res.status(400).json({ error }));
-
-          // --- recherche si le tableau userDislike contient l'userId
-          // --- si ok on incrémente de -1 le dislike et on enlève l'userId du tab userDislike
-        } else if (resultat.usersDisliked.includes(req.body.userId)) {
-          Publication.findOneAndUpdate(
-            { _id: req.params.id },
-            { $inc: { dislikes: -1 }, $pull: { usersDisliked: req.body.userId } }
-          )
-            .then(() => res.status(200).json({ message: "dislike retiré !" }))
-            .catch((error) => res.status(400).json({ error }));
-        }
       });
   }
 }

@@ -28,8 +28,8 @@ li.onepost-li {
     align-items: flex-start;
 }
 p {
-    margin: 20px 15%;
-    width: 100%;
+    margin: 20px auto;
+    width: 90%;
     font-size: clamp(14px, 1vw, 30px);
 }
 img {
@@ -51,7 +51,12 @@ button.btn.btn-post-retour {
     cursor: pointer;
     color: white;
 }
-
+.cont-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 10px 10px 15%;
+}
 .cont-btn {
     display: flex;
     justify-content: space-between;
@@ -68,9 +73,6 @@ button.btn.btn-post-retour {
     margin-right: 20px;
     cursor: pointer;
     color: white;
-    margin: 10px 0px 10px 70px;
-    /* height: 21%; */
-    
 }
 .btn-post-delete {
     border: none;
@@ -81,8 +83,6 @@ button.btn.btn-post-retour {
     margin-right: 20px;
     cursor: pointer;
     color: white;
-    margin: 10px 0px 10px 20px;
-    
 }
 li.onepost-li {
     list-style-type: none;
@@ -100,8 +100,9 @@ li.onepost-li {
     align-items: flex-start;
 }
 .postLikeCounter {
-    margin: 10px 15%;
+    /* margin: 10px 15%; */
     font-size: clamp(14px, 1vw, 30px);
+    margin: 1% 0 0 15%;
 }
 .cont-like-date {
     display: flex;
@@ -112,6 +113,50 @@ li.onepost-li {
 .updatedAt {
     padding-top: 0px;
     /* margin: 0 15%; */
-    margin: 0 76px 0 0;
+    margin: 1% 15% 0 0;
     font-size: clamp(14px, 1vw, 30px);
+}
+
+@media screen and (max-width: 550px)
+{
+    *{box-sizing: border-box; 
+    }
+    button.btn.btn-post-retour {
+        /* position: absolute; */
+        /* top: 130px; */
+        /* right: 180px; */
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: blue;
+        font-weight: 500;
+        margin-right: 15px;
+        cursor: pointer;
+        color: white;
+        margin: 0px 10px 10px 15%;
+    }
+} 
+@media screen and (max-width: 430px)
+{
+    *{box-sizing: border-box; 
+    }
+    .cont-div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px 10px 10px 15%;
+        flex-wrap: wrap;
+    }
+    .btn-post-delete {
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: red;
+        font-weight: 500;
+        margin-right: 20px;
+        cursor: pointer;
+        color: white;
+        margin-top: 5%;
+    }
+
 }

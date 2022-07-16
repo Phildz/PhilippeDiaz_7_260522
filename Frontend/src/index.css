@@ -2,6 +2,10 @@
 } /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
     du padding et de la bordure */
 
-body{
-    font-family:Lato;
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;  
+    font-family: Lato, sans-serif;
 }

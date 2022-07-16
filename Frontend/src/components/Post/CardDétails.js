@@ -72,13 +72,11 @@ const CardDétails = () => {
         console.log("dans updatePost")
         console.log("onePost.userId", onePUid);
         console.log("userId", userId);
-        if (onePUid === userId) {
+        //if (onePUid === userId) {
 
             history.push(`/updatepost/${id}`);
-        }
+        //}
     }
-
-    //console.log(userId, onePost.userId, isAdmin);
 
     return (
         <div className="post">
@@ -92,18 +90,18 @@ const CardDétails = () => {
                         <div className="postLikeCounter">{onePost.likes} "like" au total !
                         </div>
                         <div className="updatedAt">
-                            {new Date(onePost.updatedAt).toLocaleString()}
+                            {new Date(onePost.updatedAt).toLocaleDateString()}
                         </div>
                     </div>
                     <div className="cont-btn">
-                        {(!isAdmin || userPostId === userId) &&
-                            (<div className="cont-div">
+                        { (userPostId === userId || isAdmin === "true") &&
+                            <div className="cont-div">
                                 <button className="btn btn-post-update" onClick={() =>
                                     updatePost(onePost._id, onePost.userId)}>Mise à jour
                                 </button>
                                 <button className="btn btn-post-delete" onClick={() => deletePost(onePost._id, onePost.userId)}>Supprimer
                                 </button>
-                            </div>)
+                            </div>
                         }
                         <button className="btn btn-post-retour" onClick={() => retourPosts(onePost._id, onePost.likes)}>retour
                         </button>

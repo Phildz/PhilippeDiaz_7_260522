@@ -4,19 +4,20 @@ form#update-form {
 }
 .card-share {
     width: 50%;
-    height: 140px;
+    height: 110px;
     border-radius: 10px;
     box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
     /* position: sticky; */
     /* top: 120px; */
-    margin: 55px auto 20px auto;
+    margin: 20px auto 20px auto;
     background: white;
     position: relative;
 }
 button.btn.btn-post-update-retour {
-    position: absolute;
-    top: 96px;
-    right: 5px;
+    position: relative;
+    top: -26%;
+    /* right: 0px; */
+    left: 86%;
     border: none;
     padding: 7px;
     border-radius: 5px;
@@ -41,15 +42,79 @@ button.btn.btn-post-update-retour {
     align-items: center;
     justify-content: flex-start;
 }
+.shareOption-update {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    cursor: pointer;
+    margin-left: 8%;
+    width: 100%;
+}
 
 
 
 /* **** FORMATS TABLETTES ET LAPTOP **** */
 
-@media screen and (min-width: 576px)
+@media screen and (max-width: 700px)
 {
     *{box-sizing: border-box; 
     }
+    .shareBottom-update {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .shareOptions-update {
+        display: flex;
+        /* margin-left: 7%; */
+        width: 100%;
+    }
+    .shareButton-update {
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: green;
+        font-weight: 500;
+        margin: 3% 0 0 7%;
+        cursor: pointer;
+        color: white;
+    }
+    .card-share {
+        width: 50%;
+        height: 175px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 16px -8px rgb(0 0 0 / 68%);
+        /* position: sticky; */
+        /* top: 120px; */
+        margin: 55px auto 20px auto;
+        background: white;
+        position: relative;
+    }
+    button.btn.btn-post-update-retour {
+        position: relative;
+        top: 3%;
+        /* right: 0px; */
+        left: 7%;
+        border: none;
+        padding: 7px;
+        border-radius: 5px;
+        background-color: blue;
+        font-weight: 500;
+        margin-right: 15px;
+        cursor: pointer;
+        color: white;
+    }
+
+
+
+
+
+
+
+
+
+
 
 /* **** FORMAT PC L et XL **** */
 

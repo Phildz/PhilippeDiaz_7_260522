@@ -1,20 +1,18 @@
 import React from "react";
-//import React, { useContext } from "react";
-//import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-//import { UidContext } from "./AppContext";
 import Logout from "./Log/Logout";
-//import './styles/components/_navbar.scss';
 import './Navbar.css';
-//import LoginRounded from '@mui/icons-material/LoginRounded';
 
 const Navbar = () => {
-  //const uid = useContext(UidContext);
-  //const userData = useSelector((state) => state.userReducer);
+  
+  const email = localStorage.getItem("email");
 
   return (
     <nav>
       <div className="nav-container">
+        <div className="user-email">
+          {email}
+        </div>
         <div className="logo">
           <NavLink exact to="/">
             <div className="logo">

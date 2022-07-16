@@ -14,8 +14,8 @@ const authPage = require('../middleware/admin');
 router.get('/', /*auth, */publicationCtrl.readAllPublication);
 router.get('/:id', /*auth, */publicationCtrl.readOnePublication);
 router.post('/', auth /*, multer */, publicationCtrl.createPublication);
-router.put('/:id', auth, /*multer,*/ publicationCtrl.updatePublication);
-router.delete('/:id', auth, publicationCtrl.deletePublication);
+router.put('/:id', [admin, auth], /*multer,*/ publicationCtrl.updatePublication);
+router.delete('/:id', [admin, auth], publicationCtrl.deletePublication);
 router.post('/:id/like', auth, publicationCtrl.likePublication);
 
 

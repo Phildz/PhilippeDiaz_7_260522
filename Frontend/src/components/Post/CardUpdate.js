@@ -149,13 +149,12 @@ const PostUpdate = () => {
   return (
 
     <>
-      <div className="cont-image">
-        <img className="image-post" src={isloaded ? image : onePost.imageUrl} alt="img post" />
+      <div className="update-cont-image">
+        <img className="update-image-post" src={isloaded ? image : onePost.imageUrl} alt="img post" />
       </div>
       <div className="card-share">
         <div className="shareWrapper">
           <div className="shareTop">
-            <img src="" alt="" className="shareProfileImg" />
             <input
               className="shareInput"
               type="text"
@@ -166,8 +165,8 @@ const PostUpdate = () => {
         </div>
         <hr className="shareHr" />
         <form className="shareBottom-update" onSubmit={submitHandler}>
-          <div className="shareOptions">
-            <label htmlFor="file" className="shareOption">
+          <div className="shareOptions-update">
+            <label htmlFor="file" className="shareOption-update">
               <PermMedia htmlColor="tomato" className="shareIcon" />
               <span className="shareOptionText">Ajoutez une photo</span>
               <input

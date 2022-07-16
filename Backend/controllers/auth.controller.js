@@ -38,7 +38,8 @@ exports.signIn = (req, res, next) => {
                             '${process.env.TOKEN}',
                             { expiresIn: '24h' }
                         ),
-                        isAdmin: user.isAdmin
+                        isAdmin: user.isAdmin,
+                        email: user.email
                     });
                 })
                 .catch(error => res.status(500).json({ error }));

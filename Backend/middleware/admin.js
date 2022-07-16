@@ -18,9 +18,9 @@ module.exports = (req, res, next) => {
     const userId = decodedToken.userId;
     const isAdmin = decodedToken.isAdmin;    
     
-    if(!isAdmin) {
+    /*if(!isAdmin) {
         return res.status(403).send("Vous devez avoir les droits Administrateur")
-    }
+    }*/
     req.isAdmin = isAdmin;
     console.log("isAdmin", isAdmin)
     next();

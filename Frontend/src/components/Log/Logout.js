@@ -3,6 +3,7 @@ import axios from "axios";
 import cookie from "js-cookie";
 
 const Logout = () => {
+  localStorage.setItem("email", "");
   const removeCookie = (key) => {
     if (window !== "undefined") {
       cookie.remove(key, { expires: 1 });
