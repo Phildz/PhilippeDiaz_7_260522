@@ -12,10 +12,17 @@ Pour lancer l'API :
 Pour installer ce projet veuillez vous procurer :
 
 Node.js --> Version 13.14.0
+
 MongoDB
+
 React
+
 Cloner l'API
+
 npm install dans les dossiers /backend et /frontend
+
 Importer les tables de /MongoDB_DB
+
 'npm start' dans /frontend
+
 'nodemon server' dans /backend
