@@ -3,7 +3,8 @@ import axios from "axios";
 import cookie from "js-cookie";
 
 const Logout = () => {
-  localStorage.setItem("email", "");
+  //localStorage.clear();
+ 
   const removeCookie = (key) => {
     if (window !== "undefined") {
       cookie.remove(key, { expires: 1 });
@@ -19,7 +20,8 @@ const Logout = () => {
       .then(() => removeCookie("jwt"))
       .catch((err) => console.log(err));
     
-    window.location = "/profil";
+    window.location = "/";
+    localStorage.clear();
   };
 
   return (

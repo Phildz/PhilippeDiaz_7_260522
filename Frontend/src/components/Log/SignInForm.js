@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './SignInForm.css';
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
@@ -7,13 +8,12 @@ const SignInForm = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const emailError = document.querySelector(".email.error");
-    const passwordError = document.querySelector(".password.error");
+    const loginError = document.querySelector(".login.error");
 
     axios({
       method: "post",      
       url: `http://localhost:3001/api/auth/login`,
-      //headers: {"Authorization" : "Bearer my-token"},
+      headers: {"Authorization" : "Bearer my-token"},
       withCredentials: true,
       data: {
         email,
@@ -22,14 +22,17 @@ const SignInForm = () => {
     })
       .then((res) => {
         console.log(res);
+        console.log("dans then post login");
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("userId", res.data.userId);
         localStorage.setItem("isAdmin", res.data.isAdmin);
         localStorage.setItem("email", res.data.email);
-        window.location = "/home"; //utilisateur connecté
-        if (res.data.error) {
-          emailError.innerHTML = res.data.error.email;
-          passwordError.innerHTML = res.data.error.password;
+        
+        if (res.data.errors) {
+          loginError.innerHTML = res.data.errors;
+        }else{
+          window.location = "/home"; //utilisateur connecté
+          loginError.innerHTML = "";
         } 
       })
       .catch((err) => {
@@ -48,7 +51,6 @@ const SignInForm = () => {
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
-      <div className="email error"></div>
       <br />
       <label htmlFor="password">Mot de passe</label>
       <br />
@@ -59,9 +61,10 @@ const SignInForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <div className="password error"></div>
       <br />
-      <input type="submit" value="Se connecter" />
+      <input className="btn-login" type="submit" value="Se connecter" />
+      <br />
+      <div className="login error"></div>
     </form>
   );
 };

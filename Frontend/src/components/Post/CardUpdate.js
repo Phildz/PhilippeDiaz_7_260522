@@ -32,8 +32,6 @@ const PostUpdate = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
 
-  console.log(onePost.message);
-
   const isAdmin = (localStorage.getItem("isAdmin"));
   const user = localStorage.getItem("userId");
   const token = localStorage.getItem("token");
@@ -143,23 +141,23 @@ const PostUpdate = () => {
   const retourPosts = async () => {
     console.log("dans requete like");
     window.location.href="/home";
-}
+  }
 
+ 
+  //const memoMessage = document.querySelector(".shareInput");
+  //memoMessage.innerHTML = message;
 
   return (
 
     <>
-      <div className="update-cont-image">
-        <img className="update-image-post" src={isloaded ? image : onePost.imageUrl} alt="img post" />
-      </div>
       <div className="card-share">
         <div className="shareWrapper">
           <div className="shareTop">
             <input
               className="shareInput"
               type="text"
-              placeholder={onePost.message}
               onChange={(e) => setMessage(e.target.value)}
+              defaultValue={onePost.message}
             />
           </div>
         </div>
@@ -182,7 +180,10 @@ const PostUpdate = () => {
         <button className="btn btn-post-update-retour" onClick={() => retourPosts()}>retour
         </button>
       </div>
-
+      <div className="update-cont-image">
+        <p classname="h3-update">MISE A JOUR D'UNE PUBLICATION</p>
+        <img className="update-image-post" src={isloaded ? image : onePost.imageUrl} alt="img post" />
+      </div>
     </>
   );
 };

@@ -38,8 +38,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 // et servant le dossier statique /images en utilisant express.static()
 // chemin déterminé par la const path, utilisation méthode .join() avec
 // dirnamme = nom dossier où on se trouve dans lequel on rajout images
-app.use('/images', express.static(path.join(__dirname, '/images')));
-app.use(express.static('/images'));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+//app.use(express.static('/images'));
 
 const MIME_TYPES = {
   'image/jpg': 'jpg',

@@ -1,17 +1,21 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import PostUpdate from "../components/Post/CardUpdate";
 import './UpdatePost.css';
-//import PostList from "../components/Post/Card";
-//import { OnePostContext } from "../AppContext";
 
 const UpdatePost = () => {
-    
+
+    const history = useHistory();
+    const authNavigate = localStorage.getItem("token");
+
     console.log();
     return (
         <div className="updatepost-cont">
-            Mise à jour d'une publication            
-            <PostUpdate />
-            
+            {!authNavigate ?
+                history.push("/")
+                :
+                <PostUpdate />
+            }
         </div>
     );
 };

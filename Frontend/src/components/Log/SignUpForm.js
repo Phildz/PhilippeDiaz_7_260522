@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SignInForm from "./SignInForm";
+import './SignUpForm.css';
 
 const SignUpForm = () => {
   const [formSubmit, setFormSubmit] = useState(false);
@@ -12,7 +13,6 @@ const SignUpForm = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     const terms = document.getElementById("terms");
-    //const pseudoError = document.querySelector(".pseudo.error");
     const emailError = document.querySelector(".email.error");
     const passwordError = document.querySelector(".password.error");
     const passwordConfirmError = document.querySelector(
@@ -32,7 +32,7 @@ const SignUpForm = () => {
         termsError.innerHTML = "Veuillez valider les conditions générales";
     } else {
       await axios({
-        method: "post",        
+        method: "post",
         url: `http://localhost:3001/api/auth/register`,
         data: {
           //pseudo,
@@ -66,18 +66,6 @@ const SignUpForm = () => {
         </>
       ) : (
         <form action="" onSubmit={handleRegister} id="sign-up-form">
-          {/* 
-          <label htmlFor="pseudo">Pseudo</label>
-          <br />
-          <input
-            type="text"
-            name="pseudo"
-            id="pseudo"
-            onChange={(e) => setPseudo(e.target.value)}
-            value={pseudo}
-          />
-          <div className="pseudo error"></div>
-          <br /> */}
           <label htmlFor="email">Email</label>
           <br />
           <input
@@ -101,7 +89,7 @@ const SignUpForm = () => {
           <div className="password error"></div>
           <br />
           <label htmlFor="password-conf">Confirmer mot de passe</label>
-          <br/>
+          <br />
           <input
             type="password"
             name="password"
@@ -111,16 +99,18 @@ const SignUpForm = () => {
           />
           <div className="password-confirm error"></div>
           <br />
-          <input type="checkbox" id="terms" />
-          <label htmlFor="terms">
-            J'accepte les{" "}
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              conditions générales
-            </a>
-          </label>
+          <div className="cont-acceptation">
+            <input type="checkbox" id="terms" />
+            <label htmlFor="terms">
+              J'accepte les{" "}
+              <a href="/" target="_blank" rel="noopener noreferrer">
+                conditions générales
+              </a>
+            </label>
+          </div>
           <div className="terms error"></div>
           <br />
-          <input type="submit" value="Valider inscription" />
+          <input className="btn-signup" type="submit" value="Valider" />
         </form>
       )}
     </>

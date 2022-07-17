@@ -1,3 +1,10 @@
+.h3-update{
+    color: var(--couleur-primaire);
+    font-size: clamp(14px, 2vw, 30px);
+    /* margin: 0; */
+    /* padding-bottom: 0px; */
+    margin: 0px;
+}
 form#update-form {
     /* width: 100%; */
     margin: 30px auto 10px;

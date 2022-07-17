@@ -1,12 +1,4 @@
 
-/*module.exports = function (req, res, next) {
-
-    if(!req.user.isAdmin) {
-        return res.status(403).send("Vous devez avoir les droits Administrateur")
-    }
-    next();
-}*/
-
 // IMPORTS
 const jwt = require('jsonwebtoken');
 
@@ -18,9 +10,6 @@ module.exports = (req, res, next) => {
     const userId = decodedToken.userId;
     const isAdmin = decodedToken.isAdmin;    
     
-    /*if(!isAdmin) {
-        return res.status(403).send("Vous devez avoir les droits Administrateur")
-    }*/
     req.isAdmin = isAdmin;
     console.log("isAdmin", isAdmin)
     next();

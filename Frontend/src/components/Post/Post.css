@@ -25,11 +25,10 @@ ul.card-ul {
 }
 .box-message {
     /* align-items: center; */
-    margin: 5px 5px;
-    border: 1px solid black;
+    margin: 10px 10px;
+    border: 1px solid white;
     border-radius: 10px;
     background: white;
-    
     /* height: min-content; */
     padding: 0px 10px;
 }
@@ -37,6 +36,8 @@ p.cont-message {
     margin: 20px 0px 20px 10px;
     width: 100%;
     font-size: clamp(14px, 1vw, 30px);
+    color: var(--couleur-tertiaire);
+    font-weight: bold;
 }
 .updatedAt {
     /* position: absolute; */
@@ -107,14 +108,23 @@ button.btn-createPost {
     display: flex;
     justify-content: flex-end;
 }
+.card-updatedAt-date {
+    font-size: clamp(14px, 1.5vw, 30px);
+    color: var(--couleur-tertiaire);
+    font-weight: bold;
+}
 .card-postLikeCounter {
     margin: 14px 0px 7px 10px;
     font-size: clamp(14px, 1vw, 30px);
     width: 100%;
     min-width: 30%;
+    color: var(--couleur-tertiaire);
+    font-weight: 700;
 }
 i.likes {
     font-size: clamp(14px, 0.5vw, 30px);
+    color: var(--couleur-tertiaire);
+    font-style: normal;
 }
 
 

@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-//const ObjectId = require('mongoose').Types.ObjectId;
+const { signUpErrors } = require('../utils/errors.utils');
 
 // EXPORTS
 
@@ -15,21 +15,32 @@ exports.signUp = (req, res, next) => {
             });
             user.save()
                 .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
-                .catch(error => res.status(400).json({ error }));
+                .catch(error => {
+                    const errors = signUpErrors(error);
+                    res.status(200).json({ errors });
+                })
         })
-        .catch(error => res.status(500).json({ error }));
+        .catch(error => {
+            const errors = signUpErrors(error);
+            res.status(200).json({ errors });
+        })
 };
 
 exports.signIn = (req, res, next) => {
+
+    /*let errors = { email: '', password: ''};
+    if (err.message.includes("email")) errors.email = "Email inconnu";
+    if (err.message.includes('password')) errors.password = "Le mot de passe ne correspond pas";*/
+
     User.findOne({ email: req.body.email })
         .then(user => {
             if (!user) {
-                return res.status(401).json({ error: 'Utilisateur non trouvé !' });
+                return res.status(200).json({ errors : "Email ou mot de passe erroné"});
             }
             bcrypt.compare(req.body.password, user.password)
                 .then(valid => {
                     if (!valid) {
-                        return res.status(401).json({ error: "Mot de passe erroné" });
+                        return res.status(200).json({ errors : "Email ou mot de passe erroné" });
                     }
                     res.status(200).json({
                         userId: user._id,
@@ -46,8 +57,3 @@ exports.signIn = (req, res, next) => {
         })
         .catch(error => res.status(500).json({ error }));
 };
-
-//module.exports.logout = (req, res) => {
- //   res.cookie('jwt', '', { maxAge: 1 });
-  //  res.redirect('/');
-//};
