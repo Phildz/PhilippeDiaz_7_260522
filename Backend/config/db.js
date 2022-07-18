@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: './config/.env' });
+require('dotenv').config();
 
 
 
@@ -11,5 +11,5 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
         //useFindAndModify : false
     })
     .then(() => console.log('Connexion à MongoDB réussie !'))
-    .catch(() => console.log('Connexion à MongoDB échouée !', err));
+    .catch((err) => console.log('Connexion à MongoDB échouée !', err));
 

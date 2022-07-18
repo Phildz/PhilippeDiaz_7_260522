@@ -20,7 +20,6 @@ const Navbar = () => {
               <img src="/img/icon.svg" alt="icon" />
               <div className="titres-entête">
                 <h3>Groupomania</h3>
-                <h5>Réseau social</h5>
               </div>
             </div>
           </NavLink>
