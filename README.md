@@ -17,6 +17,8 @@ MongoDB
 
 React
 
+Variables d'environnement : créer un fichier ".env" à partir du fichier d'example situé dans Backend/config/.env.example
+
 Cloner l'API
 
 npm install dans les dossiers /backend et /frontend
