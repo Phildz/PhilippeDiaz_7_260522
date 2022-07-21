@@ -19,7 +19,7 @@ const multer = require('multer');
 const app = express();
 
 const corsOptions = {
-  origin: true, // process.env.CLIENT_URL,
+  origin: true, 
   credentials: true,
   'allowedHeaders': ['Authorization', 'Content-Type'],  
   'methods': 'GET,PUT,POST,DELETE,OPTIONS'

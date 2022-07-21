@@ -1,0 +1,156 @@
+[{
+  "_id": {
+    "$oid": "62d3dfd829f89b3ff14e3f4b"
+  },
+  "userId": "62b36eed44d85499c2ea744f",
+  "message": "Bonjour, je suis titi l'administrateur principal",
+  "imageUrl": "http://localhost:3001/images/image1658052568083.jpg",
+  "likes": 3,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b36eed44d85499c2ea744f",
+    "62b4840ebf728e65fda87f33",
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052568263"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052884483"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e01829f89b3ff14e3f52"
+  },
+  "userId": "62b3718b40f738e107395c50",
+  "message": "Bonjour je suis tutu le deuxième administrateur",
+  "imageUrl": "http://localhost:3001/images/image1658052632159.jpg",
+  "likes": 2,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b4840ebf728e65fda87f33",
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052632225"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052882731"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e04329f89b3ff14e3f57"
+  },
+  "userId": "62b483c8bf728e65fda87f31",
+  "message": "Bonjour suis toto",
+  "imageUrl": "http://localhost:3001/images/image1658052675149.jpg",
+  "likes": 2,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b4840ebf728e65fda87f33",
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052675248"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052881310"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e09329f89b3ff14e3f5e"
+  },
+  "userId": "62b4840ebf728e65fda87f33",
+  "message": "Moi c'est momo",
+  "imageUrl": "http://localhost:3001/images/image1658052755054.jpg",
+  "likes": 2,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b4840ebf728e65fda87f33",
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052755169"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052878209"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e0be29f89b3ff14e3f69"
+  },
+  "userId": "62b4840ebf728e65fda87f33",
+  "message": "encore moi momo",
+  "imageUrl": "http://localhost:3001/images/image1658052798449.jpg",
+  "likes": 1,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052798519"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052876330"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d3e10129f89b3ff14e3f6e"
+  },
+  "userId": "62b81c77001247d4f087afaa",
+  "message": "Coucou moi c'est dudu",
+  "imageUrl": "http://localhost:3001/images/image1658052865561.jpg",
+  "likes": 1,
+  "dislikes": 0,
+  "usersLiked": [
+    "62b81c77001247d4f087afaa"
+  ],
+  "usersDisliked": [],
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658052865667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658052874785"
+    }
+  },
+  "__v": 0
+}]

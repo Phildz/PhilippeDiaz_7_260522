@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "62b36eed44d85499c2ea744f"
+  },
+  "email": "titi@hotmail.fr",
+  "password": "$2b$10$Vzx9T0VqhlPebLJ4PmBh/e6hLUMQD86EXwVd.FXONTmoEdPJX8jFu",
+  "picture": "./uploads/profil/random-user.png",
+  "role": "user",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1655926509869"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1655926509869"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62b3718b40f738e107395c50"
+  },
+  "email": "tutu@hotmail.fr",
+  "password": "$2b$10$xDHwgemGEpn2wvS8QKGCUuWuECF/1zQBxx4thvvlzFZP5W/chX82.",
+  "picture": "./uploads/profil/random-user.png",
+  "role": "user",
+  "isAdmin": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1655927179616"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1655927179616"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62b483c8bf728e65fda87f31"
+  },
+  "email": "toto@hotmail.fr",
+  "password": "$2b$10$iOtl3hmUugtYbd4o/KkY5ORE1jBIteaV7eWmQ6GhrNu2cLy5nr.yO",
+  "picture": "./uploads/profil/random-user.png",
+  "role": "user",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1655997384730"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1655997384730"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62b4840ebf728e65fda87f33"
+  },
+  "email": "momo@hotmail.fr",
+  "password": "$2b$10$DsnhY8C6W7GtWI/z47Vb9.7dHTq.2gkWzulYqf4YW9XMUNVMDIZ/2",
+  "picture": "./uploads/profil/random-user.png",
+  "role": "user",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1655997454887"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1655997454887"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62b81c77001247d4f087afaa"
+  },
+  "email": "dudu@hotmail.fr",
+  "password": "$2b$10$WBlg/XyJDFHzFfzTppZlLu8WFUN4kxS65G0XIJ28HPmtob5lc/NsS",
+  "picture": "./uploads/profil/random-user.png",
+  "role": "user",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1656233079100"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1656233079100"
+    }
+  },
+  "__v": 0
+}]
